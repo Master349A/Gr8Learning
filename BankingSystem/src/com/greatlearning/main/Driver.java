@@ -65,11 +65,17 @@ public class Driver {
 	}
 
 	private static boolean validateCustomer(Customer customer, Customer loggedInCustomer) {
-		System.out.println(customer.getBankAccountno() + "/" + loggedInCustomer.getBankAccountno());
-		System.out.println(customer.getPassword() + "/" + loggedInCustomer.getPassword());
+		//System.out.println(customer.getBankAccountno() + "/" + loggedInCustomer.getBankAccountno());
+		//System.out.println(customer.getPassword() + "/" + loggedInCustomer.getPassword());
 		
-		boolean res = (customer.getBankAccountno() == loggedInCustomer.getBankAccountno()) && (customer.getPassword() == loggedInCustomer.getPassword());
-		System.out.println(res);
+		boolean res1 = customer.getBankAccountno() == loggedInCustomer.getBankAccountno();
+		//System.out.println(res1);
+		
+		boolean res2 = customer.getPassword().equals(loggedInCustomer.getPassword());
+		//System.out.println(res2);
+		
+		boolean res = res1 && res2;
+		//System.out.println(res);
 		
 		return res;
 	}
